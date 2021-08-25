@@ -1,3 +1,7 @@
+{% load static %}
+
 <div class="reddit-this">
-    <a href="{{ reddit_url }}" class="{{ link_class }}" target="_blank">{{link_text}}</a>
+    <a href="{{ reddit_url }}" class="{{ link_class }}" target="_blank">{% if link_text == 'REDDIT-LOGO' %}
+        <img src="{% static 'images/Reddit_Mark_OnWhite.png' %}" alt="Share on Twitter.">
+        {% else %}{{link_text}}{% endif %}</a>
 </div>
