@@ -1,3 +1,7 @@
+{% load static %}
+
 <div class="tweet-this">
-    <a href="{{ tweet_url }}" class="meta-act-link meta-tweet {{link_class}}" target="_blank">{{link_text}}</a>
+    <a href="{{ tweet_url }}" class="meta-act-link meta-tweet {{link_class}}" target="_blank">
+        {% if link_text == 'TWITTER-LOGO' %}<img src="{% static 'images/2021 Twitter logo - blue.png' %}" alt="Share on Twitter.">
+        {% else %}{{link_text}}{% endif %}</a>
 </div>
