@@ -1,3 +1,7 @@
+{% load static %}
+
 <div class="facebook-this">
-    <a href="{{ facebook_url }}" class="{{ link_class }}" target="_blank">{{link_text}}</a>
+  <a href="{{ facebook_url }}" class="{{ link_class }}" target="_blank">{% if link_text == 'FB-LOGO' %}
+    <img src="{% static 'images/f_logo_RGB-Blue_144.png' %}" alt="Facebook logo.">{% else %}
+    {{link_text}}{% endif %}</a>
 </div>
