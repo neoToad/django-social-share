@@ -1,7 +1,6 @@
-{% load static %}
-
 <div class="facebook-this">
-  <a href="{{ facebook_url }}" class="{{ link_class }}" target="_blank">{% if link_text == 'FB-LOGO' %}
-    <i class="fab fa-facebook-f"></i>{% endif %}</a>
+  <a href="{{ facebook_url }}" class="{{ link_class }} btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+     target="_blank" role="button">{% if link_text == 'FB-LOGO' %}
+    <i class="fab fa-facebook-f"></i>{% endif %}
+  </a>
 </div>
-
